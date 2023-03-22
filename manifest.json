@@ -1,0 +1,27 @@
+{
+    "name": "X-Shorts",
+    "version": "1.0.0",
+    "description": "Remove YouTube Shorts from the YouTube Subscription page",
+    "manifest_version": 3,
+    "author": "Casey Hoggan",
+    "icons": {
+        "16": "/images/x-shorts-icon-16px.png",
+        "48": "/images/x-shorts-icon-48px.png",
+        "128": "/images/x-shorts-icon-128px.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "X-Shorts",
+        "default_icons": {
+            "16": "/images/x-shorts-icon-16px.png",
+            "48": "/images/x-shorts-icon-48px.png",
+            "128": "/images/x-shorts-icon-128px.png"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["https://www.youtube.com/feed/subscriptions"],
+        "js": [
+            "script.js"
+        ]
+    }]
+}
